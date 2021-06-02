@@ -27,6 +27,7 @@ module.exports = (env, argv) => {
             }
         },
         resolve: {
+            modules: ['node_modules', getAbsolutePath('src')],
             extensions: ['.ts', '.tsx', '.js']
         },
         module: {

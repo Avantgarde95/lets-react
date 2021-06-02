@@ -1,6 +1,6 @@
 import React from 'react';
-import { Explorer } from './Explorer';
-import { Viewer } from './Viewer';
+import { Explorer } from 'view/explorer/Explorer';
+import { Viewer } from 'view/viewer/Viewer';
 
 const Header = () => (
     <div className={'Header'}>
@@ -10,7 +10,7 @@ const Header = () => (
 
 const Content = () => (
     <div className={'Content'}>
-        <Explorer />
+        <Explorer sections={[]} />
         <Viewer />
     </div>
 );

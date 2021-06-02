@@ -51,6 +51,22 @@ body {
     width: 10rem;
     height: 100%;
     @include panel();
+
+    @mixin hover {
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: #aaaaaa;
+        }
+    }
+
+    .SectionButton {
+        @include hover();
+    }
+
+    .SubsectionButton {
+        @include hover();
+    }
 }
 
 .Viewer {
