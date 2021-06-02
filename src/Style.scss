@@ -52,20 +52,51 @@ body {
     height: 100%;
     @include panel();
 
-    @mixin hover {
-        &:active,
-        &:focus,
-        &:hover {
-            background-color: #aaaaaa;
+    .SectionButton {
+        border-bottom: 1px solid #000000;
+
+        .Title {
+            cursor: pointer;
+            box-sizing: border-box;
+            padding: 0.5rem;
+
+            &.selected {
+                background-color: #cccccc;
+                border-bottom: 1px solid #000000;
+            }
+
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: #aaaaaa;
+            }
+        }
+
+        .Dropdown {
+            @keyframes create {
+                0% {
+                    transform: scaleY(0);
+                }
+                100% {
+                    transform: scaleY(1);
+                }
+            }
+
+            transform-origin: top;
+            animation: create 0.5s 1;
         }
     }
 
-    .SectionButton {
-        @include hover();
-    }
-
     .SubsectionButton {
-        @include hover();
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+
+        &:active,
+        &:focus,
+        &:hover {
+            font-weight: bold;
+        }
     }
 }
 
