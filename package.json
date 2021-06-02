@@ -1,0 +1,35 @@
+{
+    "name": "lets-react",
+    "version": "0.0.1",
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "mobx": "^6.3.2",
+        "mobx-react-lite": "^3.2.0"
+    },
+    "devDependencies": {
+        "webpack": "^5.38.1",
+        "webpack-cli": "^4.7.0",
+        "servor": "^4.0.2",
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.4",
+        "@babel/preset-react": "^7.13.13",
+        "@babel/preset-typescript": "^7.13.0",
+        "babel-loader": "^8.2.2",
+        "css-loader": "^5.2.6",
+        "sass-loader": "^11.1.1",
+        "typescript": "^4.3.2",
+        "sass": "^1.34.0",
+        "mini-css-extract-plugin": "^1.6.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "html-webpack-plugin": "^5.3.1",
+        "@types/react": "^17.0.8",
+        "@types/react-dom": "^17.0.5",
+        "@types/node": "^15.6.1"
+    },
+    "scripts": {
+        "debug": "webpack --watch --mode=development",
+        "build": "webpack --mode=production",
+        "server": "servor docs"
+    }
+}
