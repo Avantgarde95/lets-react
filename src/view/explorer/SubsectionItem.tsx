@@ -1,15 +1,15 @@
 import React from 'react';
 import { Subsection } from 'common/Article';
 
-export interface SubsectionButtonProps {
+export interface SubsectionItemProps {
     subsection: Subsection;
 }
 
-export const SubsectionButton = ({ subsection }: SubsectionButtonProps) => (
+export const SubsectionItem = ({ subsection }: SubsectionItemProps) => (
     <div
-        className={'SubsectionButton'}
+        className={'SubsectionItem'}
         onClick={() => {
-            
+
         }}
     >
         {subsection.title}

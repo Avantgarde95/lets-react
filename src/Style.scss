@@ -52,10 +52,10 @@ body {
     height: 100%;
     @include panel();
 
-    .SectionButton {
+    .SectionItem {
         border-bottom: 1px solid #000000;
 
-        .Title {
+        .Button {
             cursor: pointer;
             box-sizing: border-box;
             padding: 0.5rem;
@@ -87,7 +87,7 @@ body {
         }
     }
 
-    .SubsectionButton {
+    .SubsectionItem {
         cursor: pointer;
         box-sizing: border-box;
         padding: 0.5rem 0.5rem 0.5rem 1.5rem;

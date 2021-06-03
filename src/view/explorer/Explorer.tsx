@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { ArticleContext } from 'store/ArticleContext';
-import { SectionButton } from 'view/explorer/SectionButton';
+import { SectionItem } from 'view/explorer/SectionItem';
 
 export const Explorer = () => {
     const { article } = useContext(ArticleContext);
@@ -9,7 +9,7 @@ export const Explorer = () => {
     return (
         <div className={'Explorer'}>
             {article.sections.map((section, index) =>
-                <SectionButton
+                <SectionItem
                     section={section}
                     isSelected={index === selectedIndex}
                     onClick={() => {

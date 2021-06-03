@@ -1,18 +1,18 @@
 import React from 'react';
 import { Section } from 'common/Article';
-import { SubsectionButton } from 'view/explorer/SubsectionButton';
+import { SubsectionItem } from 'view/explorer/SubsectionItem';
 
-export interface SectionButtonProps {
+export interface SectionItemProps {
     section: Section;
     isSelected: boolean;
     onClick: () => any;
 }
 
-export const SectionButton = ({ section, isSelected, onClick }: SectionButtonProps) => {
+export const SectionItem = ({ section, isSelected, onClick }: SectionItemProps) => {
     return (
-        <div className={'SectionButton'}>
+        <div className={'SectionItem'}>
             <div
-                className={`Title ${isSelected ? 'selected' : ''}`}
+                className={`Button ${isSelected ? 'selected' : ''}`}
                 onClick={onClick}
             >
                 {section.title}
@@ -20,7 +20,7 @@ export const SectionButton = ({ section, isSelected, onClick }: SectionButtonPro
             {isSelected && (
                 <div className={'Dropdown'}>
                     {section.subsections.map(subsection =>
-                        <SubsectionButton subsection={subsection} />
+                        <SubsectionItem subsection={subsection} />
                     )}
                 </div>
             )}
