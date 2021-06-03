@@ -1,8 +1,10 @@
-import React, { createContext, ReactNode } from 'react';
+import React, { createContext, ReactNode, useState } from 'react';
 import { Article } from 'common/Article';
 
 export const ArticleContext = createContext({} as {
-    article: Article
+    article: Article,
+    selectedSectionIndex: number,
+    setSelectedSectionIndex: (value: number) => any
 });
 
 const dummyArticle: Article = {
@@ -33,8 +35,16 @@ export interface ArticleProviderProps {
     children: ReactNode;
 }
 
-export const ArticleProvider = ({ children }: ArticleProviderProps) => (
-    <ArticleContext.Provider value={{ article: dummyArticle }}>
-        {children}
-    </ArticleContext.Provider>
-);
+export const ArticleProvider = ({ children }: ArticleProviderProps) => {
+    const [selectedSectionIndex, setSelectedSectionIndex] = useState(0);
+
+    return (
+        <ArticleContext.Provider value={{
+            article: dummyArticle,
+            selectedSectionIndex: selectedSectionIndex,
+            setSelectedSectionIndex: setSelectedSectionIndex
+        }}>
+            {children}
+        </ArticleContext.Provider>
+    );
+};

@@ -104,4 +104,13 @@ body {
     width: 100%;
     height: 100%;
     @include panel();
+
+    .SectionTitle {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .SubsectionTitle {
+        font-size: 1.5rem;
+    }
 }
