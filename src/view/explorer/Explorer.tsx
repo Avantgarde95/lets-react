@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import { ArticleContext } from 'store/ArticleContext';
-import { SectionItem } from 'view/explorer/SectionItem';
+import { ArticleItem } from 'view/explorer/ArticleItem';
 
 export const Explorer = () => {
-    const { article, selectedSectionIndex, setSelectedSectionIndex } = useContext(ArticleContext);
+    const { articles, articleIndex, setArticleIndex } = useContext(ArticleContext);
 
     return (
         <div className={'Explorer'}>
-            {article.sections.map((section, index) =>
-                <SectionItem
-                    section={section}
-                    isSelected={index === selectedSectionIndex}
+            {articles.map((article, index) =>
+                <ArticleItem
+                    article={article}
+                    isSelected={index === articleIndex}
                     onClick={() => {
-                        setSelectedSectionIndex(index);
+                        setArticleIndex(index);
                     }}
                 />
             )}

@@ -2,47 +2,44 @@ import React, { createContext, ReactNode, useState } from 'react';
 import { Article } from 'common/Article';
 
 export const ArticleContext = createContext({} as {
-    article: Article,
-    selectedSectionIndex: number,
-    setSelectedSectionIndex: (value: number) => any
+    articles: Article[],
+    articleIndex: number,
+    setArticleIndex: (value: number) => any
 });
 
-const dummyArticle: Article = {
-    title: 'Let\'s react',
-    sections: [
-        {
-            title: 'React', subsections: [
-                { title: 'About', content: {} },
-                { title: 'Component', content: {} },
-                { title: 'JSX', content: {} },
-                { title: 'Context', content: {} }
-            ]
-        },
-        {
-            title: 'Webpack', subsections: [
-                { title: 'About', content: {} }
-            ]
-        },
-        {
-            title: 'MobX', subsections: [
-                { title: 'About', content: {} }
-            ]
-        }
-    ]
-};
+const dummyArticles: Article[] = [
+    {
+        title: 'React', sections: [
+            { title: 'About', html: '' },
+            { title: 'Component', html: '' },
+            { title: 'JSX', html: '' },
+            { title: 'Context', html: '' }
+        ]
+    },
+    {
+        title: 'Webpack', sections: [
+            { title: 'About', html: '' }
+        ]
+    },
+    {
+        title: 'MobX', sections: [
+            { title: 'About', html: '' }
+        ]
+    }
+];
 
 export interface ArticleProviderProps {
     children: ReactNode;
 }
 
 export const ArticleProvider = ({ children }: ArticleProviderProps) => {
-    const [selectedSectionIndex, setSelectedSectionIndex] = useState(0);
+    const [articleIndex, setArticleIndex] = useState(0);
 
     return (
         <ArticleContext.Provider value={{
-            article: dummyArticle,
-            selectedSectionIndex: selectedSectionIndex,
-            setSelectedSectionIndex: setSelectedSectionIndex
+            articles: dummyArticles,
+            articleIndex: articleIndex,
+            setArticleIndex: setArticleIndex
         }}>
             {children}
         </ArticleContext.Provider>

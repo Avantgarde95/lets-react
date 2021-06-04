@@ -5,14 +5,5 @@ export interface Article {
 
 export interface Section {
     title: string;
-    subsections: Subsection[];
-}
-
-export interface Subsection {
-    title: string;
-    content: Content;
-}
-
-export interface Content {
-
+    html: string;
 }

@@ -52,7 +52,7 @@ body {
     height: 100%;
     @include panel();
 
-    .SectionItem {
+    .ArticleItem {
         border-bottom: 1px solid #000000;
 
         .Button {
@@ -87,7 +87,7 @@ body {
         }
     }
 
-    .SubsectionItem {
+    .SectionItem {
         cursor: pointer;
         box-sizing: border-box;
         padding: 0.5rem 0.5rem 0.5rem 1.5rem;
@@ -105,12 +105,12 @@ body {
     height: 100%;
     @include panel();
 
-    .SectionTitle {
+    .ArticleTitle {
         font-size: 2rem;
         font-weight: bold;
     }
 
-    .SubsectionTitle {
+    .SectionTitle {
         font-size: 1.5rem;
     }
 }

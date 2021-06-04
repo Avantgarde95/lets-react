@@ -1,17 +1,13 @@
-import React, { useContext } from 'react';
-import { ArticleContext, ArticleProvider } from 'store/ArticleContext';
+import React from 'react';
+import { ArticleProvider } from 'store/ArticleContext';
 import { Explorer } from 'view/explorer/Explorer';
 import { Viewer } from 'view/viewer/Viewer';
 
-const Header = () => {
-    const { article } = useContext(ArticleContext);
-
-    return (
-        <div className={'Header'}>
-            {article.title}
-        </div>
-    );
-}
+const Header = () => (
+    <div className={'Header'}>
+        Let's react
+    </div>
+);
 
 const Content = () => (
     <div className={'Content'}>
