@@ -44,6 +44,10 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(css|scss)$/,
                     use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                },
+                {
+                    test: /\.md$/,
+                    type: 'asset/source' // raw-loader: Deprecated in Webpack 5.
                 }
             ]
         },

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArticleProvider } from 'store/ArticleContext';
 import { Explorer } from 'view/explorer/Explorer';
 import { Viewer } from 'view/viewer/Viewer';
 
@@ -17,10 +16,8 @@ const Content = () => (
 );
 
 export const App = () => (
-    <ArticleProvider>
-        <div className={'App'}>
-            <Header />
-            <Content />
-        </div>
-    </ArticleProvider>
+    <div className={'App'}>
+        <Header />
+        <Content />
+    </div>
 );

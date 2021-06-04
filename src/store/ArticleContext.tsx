@@ -7,37 +7,17 @@ export const ArticleContext = createContext({} as {
     setArticleIndex: (value: number) => any
 });
 
-const dummyArticles: Article[] = [
-    {
-        title: 'React', sections: [
-            { title: 'About', html: '' },
-            { title: 'Component', html: '' },
-            { title: 'JSX', html: '' },
-            { title: 'Context', html: '' }
-        ]
-    },
-    {
-        title: 'Webpack', sections: [
-            { title: 'About', html: '' }
-        ]
-    },
-    {
-        title: 'MobX', sections: [
-            { title: 'About', html: '' }
-        ]
-    }
-];
-
 export interface ArticleProviderProps {
+    articles: Article[],
     children: ReactNode;
 }
 
-export const ArticleProvider = ({ children }: ArticleProviderProps) => {
+export const ArticleProvider = ({ articles, children }: ArticleProviderProps) => {
     const [articleIndex, setArticleIndex] = useState(0);
 
     return (
         <ArticleContext.Provider value={{
-            articles: dummyArticles,
+            articles: articles,
             articleIndex: articleIndex,
             setArticleIndex: setArticleIndex
         }}>

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Markdown from 'markdown-to-jsx';
 import { ArticleContext } from 'store/ArticleContext';
 
 export const Viewer = () => {
@@ -9,7 +10,10 @@ export const Viewer = () => {
         <div className={'Viewer'}>
             <div className={'ArticleTitle'}>{article.title}</div>
             {article.sections.map(section => (
-                <div className={'SectionTitle'}>{section.title}</div>
+                <>
+                    {(section.title !== null) && <h1>{section.title}</h1>}
+                    <Markdown>{section.content}</Markdown>
+                </>
             ))}
         </div>
     );

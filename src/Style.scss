@@ -37,17 +37,19 @@ body {
     }
 
     .Content {
+        display: flex;
         flex-grow: 1;
         width: 100%;
     }
 }
 
 @mixin panel {
+    box-sizing: border-box;
     border: 3px solid #000000;
 }
 
 .Explorer {
-    float: left;
+    flex-shrink: 0;
     width: 10rem;
     height: 100%;
     @include panel();
@@ -101,16 +103,13 @@ body {
 }
 
 .Viewer {
-    width: 100%;
+    flex-grow: 1;
     height: 100%;
+    padding: 0.5rem;
     @include panel();
 
     .ArticleTitle {
         font-size: 2rem;
         font-weight: bold;
-    }
-
-    .SectionTitle {
-        font-size: 1.5rem;
     }
 }
