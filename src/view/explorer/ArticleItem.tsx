@@ -19,8 +19,8 @@ export const ArticleItem = ({ article, isSelected, onClick }: ArticleItemProps) 
             </div>
             {isSelected && (
                 <div className={'Dropdown'}>
-                    {article.sections.map(section =>
-                        (section.title !== null) && <SectionItem section={section} />
+                    {article.sections.map((section, index) =>
+                        (section.title !== null) && <SectionItem index={index} section={section} />
                     )}
                 </div>
             )}

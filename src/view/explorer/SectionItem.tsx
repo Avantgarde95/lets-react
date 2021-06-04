@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Section } from 'common/Article';
+import { ArticleContext } from 'store/ArticleContext';
 
 export interface SectionItemProps {
+    index: number;
     section: Section;
 }
 
-export const SectionItem = ({ section }: SectionItemProps) => (
-    <div
-        className={'SectionItem'}
-        onClick={() => {
+export const SectionItem = ({ index, section }: SectionItemProps) => {
+    const { setSectionIndex } = useContext(ArticleContext);
 
-        }}
-    >
-        {section.title}
-    </div>
-);
+    return (
+        <div
+            className={'SectionItem'}
+            onClick={() => {
+                setSectionIndex(index);
+            }}
+        >
+            {section.title}
+        </div>
+    );
+};

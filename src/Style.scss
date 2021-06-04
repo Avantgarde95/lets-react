@@ -37,6 +37,7 @@ body {
     }
 
     .Content {
+        overflow-y: hidden;
         display: flex;
         flex-grow: 1;
         width: 100%;
@@ -103,6 +104,7 @@ body {
 }
 
 .Viewer {
+    overflow-y: auto;
     flex-grow: 1;
     height: 100%;
     padding: 0.5rem;
