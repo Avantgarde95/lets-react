@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import Markdown from 'markdown-to-jsx';
+import ReactMarkdown from 'react-markdown';
 import { ArticleContext } from 'store/ArticleContext';
 
 interface SectionTitleProps {
@@ -30,7 +30,7 @@ export const Viewer = () => {
             {article.sections.map((section, index) => (
                 <>
                     {(section.title !== null) && <SectionTitle index={index} title={section.title} />}
-                    <Markdown>{section.content}</Markdown>
+                    <ReactMarkdown>{section.content}</ReactMarkdown>
                 </>
             ))}
         </div>

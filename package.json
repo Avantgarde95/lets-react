@@ -6,7 +6,7 @@
         "react-dom": "^17.0.2",
         "mobx": "^6.3.2",
         "mobx-react-lite": "^3.2.0",
-        "markdown-to-jsx": "^7.1.3"
+        "react-markdown": "^6.0.2"
     },
     "devDependencies": {
         "webpack": "^5.38.1",
