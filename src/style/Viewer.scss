@@ -1,0 +1,13 @@
+.Viewer {
+    box-sizing: border-box;
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 100%;
+    padding: 0.5rem;
+    border: 3px solid #000000;
+
+    .ArticleTitle {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}

@@ -1,59 +1,9 @@
-html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.Root {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.App {
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 1rem;
-
-    .Header {
-        width: 100%;
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-
-    .Content {
-        overflow-y: hidden;
-        display: flex;
-        flex-grow: 1;
-        width: 100%;
-    }
-}
-
-@mixin panel {
-    box-sizing: border-box;
-    border: 3px solid #000000;
-}
-
 .Explorer {
+    box-sizing: border-box;
     flex-shrink: 0;
     width: 10rem;
     height: 100%;
-    @include panel();
+    border: 3px solid #000000;
 
     .ArticleItem {
         border-bottom: 1px solid #000000;
@@ -100,18 +50,5 @@ body {
         &:hover {
             font-weight: bold;
         }
-    }
-}
-
-.Viewer {
-    overflow-y: auto;
-    flex-grow: 1;
-    height: 100%;
-    padding: 0.5rem;
-    @include panel();
-
-    .ArticleTitle {
-        font-size: 2rem;
-        font-weight: bold;
     }
 }
