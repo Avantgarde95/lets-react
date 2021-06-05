@@ -8,17 +8,30 @@ import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
 import xonokai from 'react-syntax-highlighter/dist/esm/styles/prism/xonokai';
 
 CodeView.registerLanguage('jsx', jsx);
-CodeView.registerLanguage('javascript', jsx);
 CodeView.registerLanguage('tsx', tsx);
-CodeView.registerLanguage('typescript', tsx);
 CodeView.registerLanguage('json', json);
+
+function convertLanguage(language: string) {
+    const languageLower = language.toLowerCase();
+
+    switch (languageLower) {
+        case 'javascript':
+            return 'jsx';
+        case 'typescript':
+            return 'tsx';
+        case 'jsonc':
+            return 'json';
+        default:
+            return languageLower;
+    }
+}
 
 const components: Components = {
     code({ inline, className, children }) {
         const hasLanguage = ((typeof className !== 'undefined') && className.startsWith('language-'));
 
         if (!inline && hasLanguage) {
-            const language = className!!.substr(9).toLowerCase();
+            const language = convertLanguage(className!!.substring(9));
             return <CodeView language={language} style={xonokai}>{children}</CodeView>
         } else {
             return <code className={className}>{children}</code>;
