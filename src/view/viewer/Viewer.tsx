@@ -9,15 +9,17 @@ export const Viewer = () => {
     const article = articles[articleIndex];
 
     return (
-        <div className={'Viewer'}>
+        <div
+            className={'Viewer'}
+            onClick={() => {
+                openMenu(false);
+            }}
+        >
+            <div className={'ArticleTitle'}>{article.title}</div>
             <div
-                className={'Area'}
-                key={article.title} // Force React to re-render Area when the article is changed.
-                onClick={() => {
-                    openMenu(false);
-                }}
+                className={'ArticleSections'}
+                key={article.title} // Force React to re-render this when the article is changed.
             >
-                <div className={'ArticleTitle'}>{article.title}</div>
                 {article.sections.map((section, index) => (
                     <SectionView index={index} section={section} />
                 ))}
