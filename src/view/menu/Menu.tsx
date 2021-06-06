@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { ArticleContext } from 'store/ArticleContext';
-import { ArticleItem } from 'view/explorer/ArticleItem';
+import { ArticleItem } from 'view/menu/ArticleItem';
 
-export const Explorer = () => {
+export const Menu = () => {
     const { articles, articleIndex, setArticleIndex } = useContext(ArticleContext);
 
     return (
-        <div className={'Explorer'}>
+        <div className={'Menu'}>
             {articles.map((article, index) =>
                 <ArticleItem
                     article={article}

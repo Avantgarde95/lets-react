@@ -1,5 +1,5 @@
 import React from 'react';
-import { Explorer } from 'view/explorer/Explorer';
+import { Menu } from 'view/menu/Menu';
 import { Viewer } from 'view/viewer/Viewer';
 
 const Header = () => (
@@ -19,7 +19,7 @@ const Header = () => (
 
 const Content = () => (
     <div className={'Content'}>
-        <Explorer />
+        <Menu />
         <Viewer />
     </div>
 );

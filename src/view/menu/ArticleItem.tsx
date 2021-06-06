@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from 'common/Article';
-import { SectionItem } from 'view/explorer/SectionItem';
+import { SectionItem } from 'view/menu/SectionItem';
 
 export interface ArticleItemProps {
     article: Article;

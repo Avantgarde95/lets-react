@@ -6,7 +6,7 @@ import { App } from 'view/App';
 
 import 'style/Main.scss';
 import 'style/App.scss';
-import 'style/Explorer.scss';
+import 'style/Menu.scss';
 import 'style/Viewer.scss';
 
 import Node from 'article/Node.md';
