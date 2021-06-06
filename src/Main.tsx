@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Article, Section } from 'common/Article';
 import { ArticleProvider } from 'store/ArticleContext';
+import { ViewProvider } from 'store/ViewContext';
 import { App } from 'view/App';
 
 import 'style/Main.scss';
@@ -51,6 +52,8 @@ const articles: Article[] = [
 
 render((
     <ArticleProvider articles={articles}>
-        <App />
+        <ViewProvider>
+            <App />
+        </ViewProvider>
     </ArticleProvider>
 ), document.getElementsByClassName('Root')[0]);

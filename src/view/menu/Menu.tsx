@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { ArticleContext } from 'store/ArticleContext';
+import { ViewContext } from 'store/ViewContext';
 import { ArticleItem } from 'view/menu/ArticleItem';
 
 export const Menu = () => {
     const { articles, articleIndex, setArticleIndex } = useContext(ArticleContext);
+    const { isMenuOpen } = useContext(ViewContext);
 
     return (
-        <div className={'Menu'}>
+        <div className={`Menu ${isMenuOpen ? 'open' : ''}`}>
             {articles.map((article, index) =>
                 <ArticleItem
                     article={article}
