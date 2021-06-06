@@ -7,13 +7,30 @@
     height: 100%;
     margin: 0;
     padding: 1rem;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
 
     .Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
-        font-size: 2rem;
-        font-weight: bold;
         margin-bottom: 1rem;
+
+        .Button {
+            box-sizing: border-box;
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid #000000;
+            padding: 0.1rem 0.5rem;
+            background-color: transparent;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .Title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
     }
 
     .Content {
