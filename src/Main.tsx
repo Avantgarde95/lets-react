@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Article, Section } from 'common/Article';
+import { parseSections } from 'ArticleParser';
+import { Article } from 'common/Article';
 import { ArticleProvider } from 'store/ArticleContext';
 import { ViewProvider } from 'store/ViewContext';
 import { App } from 'view/App';
@@ -10,50 +11,28 @@ import 'style/App.scss';
 import 'style/Menu.scss';
 import 'style/Viewer.scss';
 
-import Node from 'article/Node.md';
-import TypeScript from 'article/TypeScript.md';
-
-function getTitleIfSection(line: string) {
-    const match = line.match(/^\s*#[^#]/);
-
-    if (match === null) {
-        return null;
-    } else {
-        const heading = match[0];
-        return line.slice(heading.length);
-    }
-}
-
-function toSections(markdown: string) {
-    const lines = markdown.split(/\r?\n/);
-    const sections: Section[] = [{ title: null, content: '' }];
-
-    lines.forEach(line => {
-        const title = getTitleIfSection(line);
-
-        if (title !== null) {
-            sections.push({
-                title: title,
-                content: ''
-            });
-        } else {
-            const currentSection = sections[sections.length - 1];
-            currentSection.content += line + '\n';
-        }
-    });
-
-    return sections;
-}
+import NodeArticle from 'article/Node.md';
+import TypeScriptArticle from 'article/TypeScript.md';
+import SASSArticle from 'article/SASS.md';
+import WebpackArticle from 'article/Webpack.md';
+import ReactArticle from 'article/React.md';
 
 const articles: Article[] = [
-    { title: 'Node', sections: toSections(Node) },
-    { title: 'TypeScript', sections: toSections(TypeScript) }
+    { title: 'Node', sections: parseSections(NodeArticle) },
+    { title: 'TypeScript', sections: parseSections(TypeScriptArticle) },
+    { title: 'SASS', sections: parseSections(SASSArticle) },
+    { title: 'Webpack', sections: parseSections(WebpackArticle) },
+    { title: 'React', sections: parseSections(ReactArticle) }
 ];
 
-render((
+const Page = () => (
     <ArticleProvider articles={articles}>
         <ViewProvider>
             <App />
         </ViewProvider>
     </ArticleProvider>
-), document.getElementsByClassName('Root')[0]);
+);
+
+const root = document.getElementsByClassName('Root')[0];
+
+render(<Page />, root);
