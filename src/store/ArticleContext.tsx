@@ -4,9 +4,9 @@ import { Article } from 'common/Article';
 export const ArticleContext = createContext({} as {
     articles: Article[],
     articleIndex: number,
-    sectionIndex: number,
+    sectionIndex: number | null,
     setArticleIndex: (value: number) => any,
-    setSectionIndex: (value: number) => any
+    setSectionIndex: (value: number | null) => any
 });
 
 export interface ArticleProviderProps {
@@ -16,7 +16,7 @@ export interface ArticleProviderProps {
 
 export const ArticleProvider = ({ articles, children }: ArticleProviderProps) => {
     const [articleIndex, setArticleIndex] = useState(0);
-    const [sectionIndex, setSectionIndex] = useState(0);
+    const [sectionIndex, setSectionIndex] = useState<number | null>(null);
 
     return (
         <ArticleContext.Provider value={{

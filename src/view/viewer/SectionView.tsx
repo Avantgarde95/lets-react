@@ -1,5 +1,5 @@
-import { Section } from 'common/Article';
 import React, { useContext, useEffect, useRef } from 'react';
+import { Section } from 'common/Article';
 import { ArticleContext } from 'store/ArticleContext';
 import { ContentView } from 'view/viewer/ContentView';
 
@@ -9,12 +9,13 @@ interface SectionViewProps {
 }
 
 export const SectionView = ({ index, section }: SectionViewProps) => {
-    const { sectionIndex } = useContext(ArticleContext);
+    const { sectionIndex, setSectionIndex } = useContext(ArticleContext);
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (index === sectionIndex) {
-            ref.current!!.scrollIntoView();
+            ref.current!!.scrollIntoView({ behavior: 'smooth' });
+            setSectionIndex(null);
         }
     }, [sectionIndex]);
 
