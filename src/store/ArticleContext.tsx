@@ -1,10 +1,11 @@
 import React, { createContext, ReactNode, useState } from 'react';
 import { Article } from 'common/Article';
 
+// Article의 목록 및 상태를 저장.
 export const ArticleContext = createContext({} as {
-    articles: Article[],
-    articleIndex: number,
-    sectionIndex: number | null,
+    articles: Article[], // Article 목록.
+    articleIndex: number, // 현재 선택된 article.
+    sectionIndex: number | null, // 현재 선택된 section. (null: 선택하지 않음)
     setArticleIndex: (value: number) => any,
     setSectionIndex: (value: number | null) => any
 });

@@ -1,5 +1,6 @@
 import React, { createContext, ReactNode, useState } from 'react';
 
+// View의 상태를 저장.
 export const ViewContext = createContext({} as {
     isMenuOpen: boolean,
     openMenu: (value: boolean) => any

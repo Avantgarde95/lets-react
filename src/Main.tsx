@@ -6,11 +6,13 @@ import { ArticleProvider } from 'store/ArticleContext';
 import { ViewProvider } from 'store/ViewContext';
 import { App } from 'view/App';
 
+// 스타일들 불러오기.
 import 'style/Main.scss';
 import 'style/App.scss';
 import 'style/Menu.scss';
 import 'style/Viewer.scss';
 
+// Article들 불러오기.
 import NodeArticle from 'article/Node.md';
 import TypeScriptArticle from 'article/TypeScript.md';
 import SASSArticle from 'article/SASS.md';
@@ -25,6 +27,7 @@ const articles: Article[] = [
     { title: 'React', sections: parseSections(ReactArticle) }
 ];
 
+// 최상위 component.
 const Page = () => (
     <ArticleProvider articles={articles}>
         <ViewProvider>
@@ -33,6 +36,7 @@ const Page = () => (
     </ArticleProvider>
 );
 
+// React가 <Page/>를 렌더링할 element. (Template.html 참고)
 const root = document.getElementsByClassName('Root')[0];
 
 render(<Page />, root);
