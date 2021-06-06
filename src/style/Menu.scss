@@ -1,3 +1,12 @@
+@keyframes showMenuDropdown {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 .Menu {
     position: absolute;
     z-index: 1;
@@ -34,17 +43,8 @@
         }
 
         .Dropdown {
-            @keyframes create {
-                0% {
-                    transform: scaleY(0);
-                }
-                100% {
-                    transform: scaleY(1);
-                }
-            }
-
             transform-origin: top;
-            animation: create 0.5s 1;
+            animation: showMenuDropdown 0.5s 1;
         }
     }
 
