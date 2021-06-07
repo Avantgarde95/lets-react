@@ -14,6 +14,7 @@ import 'style/Viewer.scss';
 
 // Article들 불러오기.
 import IntroductionArticle from 'article/Introduction.md';
+import WebArticle from 'article/Web.md';
 import NodeArticle from 'article/Node.md';
 import TypeScriptArticle from 'article/TypeScript.md';
 import SASSArticle from 'article/SASS.md';
@@ -22,6 +23,7 @@ import ReactArticle from 'article/React.md';
 
 const articles: Article[] = [
     { title: 'Introduction', sections: parseSections(IntroductionArticle) },
+    { title: 'Web', sections: parseSections(WebArticle) },
     { title: 'Node', sections: parseSections(NodeArticle) },
     { title: 'TypeScript', sections: parseSections(TypeScriptArticle) },
     { title: 'SASS', sections: parseSections(SASSArticle) },
