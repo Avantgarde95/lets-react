@@ -2,7 +2,7 @@ import { Section } from 'common/Article';
 
 // line이 "# Title" 형태면 "Title"을 반환, 해당 형태가 아니면 null을 반환.
 function getTitleIfSection(line: string) {
-    const match = line.match(/^\s*#[^#]/);
+    const match = line.match(/^#[^#]/);
 
     if (match === null) {
         return null;

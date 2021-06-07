@@ -5,11 +5,15 @@ import { PrismLight as CodeView } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import html from 'react-syntax-highlighter/dist/cjs/languages/prism/markup';
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 import xonokai from 'react-syntax-highlighter/dist/esm/styles/prism/xonokai';
 
 CodeView.registerLanguage('jsx', jsx);
 CodeView.registerLanguage('tsx', tsx);
 CodeView.registerLanguage('json', json);
+CodeView.registerLanguage('html', html);
+CodeView.registerLanguage('css', css);
 
 function convertLanguage(language: string) {
     const languageLower = language.toLowerCase();

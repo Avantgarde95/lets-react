@@ -19,5 +19,10 @@
 - `npm run server`를 실행하면 테스트용 웹 서버가 실행됩니다.
 - 웹 브라우저에서 <http://localhost:8080> 또는 터미널에 뜨는 주소로 접속하여 웹사이트를 실행할 수 있습니다.
 
+### How to add an article
+- "src/article"에서 markdown 파일들을 수정하거나 추가하세요.
+- "src/Main.tsx"에서 markdown 파일을 import하세요.
+- `npm run debug` or `npm run build`
+
 ### Troubleshooting
 - 만약 코드를 수정하고 빌드했어도 웹사이트가 그대로이면 [새로고침 또는 강력 새로고침](https://imweb.me/faq?mode=view&category=29&category2=47&idx=71559)을 시도해 보세요.

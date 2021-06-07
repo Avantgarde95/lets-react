@@ -26,9 +26,9 @@ const articles: Article[] = [
     { title: 'Web', sections: parseSections(WebArticle) },
     { title: 'Node', sections: parseSections(NodeArticle) },
     { title: 'TypeScript', sections: parseSections(TypeScriptArticle) },
-    { title: 'SASS', sections: parseSections(SASSArticle) },
     { title: 'Webpack', sections: parseSections(WebpackArticle) },
-    { title: 'React', sections: parseSections(ReactArticle) }
+    { title: 'React', sections: parseSections(ReactArticle) },
+    { title: 'SASS', sections: parseSections(SASSArticle) }
 ];
 
 // 최상위 component.

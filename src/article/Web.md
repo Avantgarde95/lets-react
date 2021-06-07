@@ -4,29 +4,24 @@
 
 - HTML: 웹사이트의 구조(layout)를 표현합니다.
     ```html
-    <div>
-        <span class="MyTitle">Test</span>
-        <button class="MyButton">Nice button</button>
+    <div class="App">
+        <span class="About">Hello!</span>
+        <button class="Run">Click</button>
     </div>
     ```
 - CSS: 웹사이트의 스타일(ex. 색깔, 크기)을 결정합니다.
     ```css
-    .MyButton {
-        font-size: 15px;
-        color: blue;
+    .About {
+        color: #0000ff;
     }
     ```
 - JavaScript: 웹사이트의 동작(ex. 상호작용, DOM 변경)을 표현합니다.
     ```javascript
-    function onClickButton() {
-        ...
-    }
+    const button = document.getElementsByClassName('Run')[0];
 
-    // HTML에서 button을 가져온다.
-    const button = document.getElementsByClassName('MyButton')[0];
-
-    // Button 클릭 시 onClickButton 실행
-    button.addEventListener('click', onClickButton);
+    button.addEventListener('click', () => {
+        alert('Yeah!');
+    });
     ```
 
 # How website works
@@ -34,3 +29,43 @@
 - 사용자(클라이언트)가 서버에 웹사이트를 요청하면, 서버는 HTML, JS, CSS 파일들을 보내 줍니다.
 - 웹 브라우저는 HTML, CSS로부터 각각 DOM(Document Object Model) tree 및 CSSOM(CSS Object Model)을 생성합니다.
 - 웹 브라우저는 이들로부터 render tree를 만들어 화면에 웹사이트를 그립니다.
+
+# Example
+
+아래는 간단한 웹사이트입니다. .html 파일로 저장한다음 실행하면 텍스트와 버튼이 있는 간단한 웹사이트가 나타납니다.
+
+```html
+<html>
+<head>
+    <title>제목</title>
+
+    <style type="text/css">
+        .App {
+            width: 100px;
+            border: 1px solid #000000;
+        }
+
+        .About {
+            color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="App">
+        <span class="About">Hello!</span>
+        <button class="Run">Click</button>
+    </div>
+
+    <script type="text/javascript">
+        const button = document.getElementsByClassName('Run')[0];
+
+        button.addEventListener('click', () => {
+            alert('Yeah!');
+        });
+    </script>
+</body>
+</html>
+```
+
+이 때 `<script>...</script>`는 `<head>...</head>`에 넣는 경우도 있고, 위의 예시처럼 `<body>...</body>`의 **끝에** 넣는 경우도 있습니다.
+어떤 차이가 있을까요??
