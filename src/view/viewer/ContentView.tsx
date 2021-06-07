@@ -36,7 +36,7 @@ const components: Components = {
 
         if (!inline && hasLanguage) {
             const language = convertLanguage(className!!.substring(9));
-            return <CodeView language={language} style={xonokai}>{children}</CodeView>
+            return <CodeView language={language} style={xonokai}>{String(children).trimRight()}</CodeView>
         } else {
             return <code className={className}>{children}</code>;
         }
