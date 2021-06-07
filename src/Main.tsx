@@ -24,7 +24,7 @@ import ReactArticle from 'article/React.md';
 const articles: Article[] = [
     { title: 'Introduction', sections: parseSections(IntroductionArticle) },
     { title: 'Web', sections: parseSections(WebArticle) },
-    { title: 'Node', sections: parseSections(NodeArticle) },
+    { title: 'Node.js', sections: parseSections(NodeArticle) },
     { title: 'TypeScript', sections: parseSections(TypeScriptArticle) },
     { title: 'Webpack', sections: parseSections(WebpackArticle) },
     { title: 'React', sections: parseSections(ReactArticle) },
