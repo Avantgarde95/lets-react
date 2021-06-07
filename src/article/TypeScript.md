@@ -12,6 +12,17 @@
         return x + y;
     }
     ```
+- JavaScript의 기본 자료형뿐만 아니라, 자료형의 조합을 통한 복잡한 자료형 생성도 지원합니다.
+    ```typescript
+    // number이거나 string
+    const x: number | string = 3;
+
+    // 'A', 'B', or 'C' ('D'를 넣으면 에러)
+    const y: 'A' | 'B' | 'C' = 'A';
+
+    // 키는 number, 값은 boolean인 map 형태의 객체
+    const z: {[key: number]: boolean} = {3: true, 4: false};
+    ```
 - 웹 브라우저는 일반적으로 JavaScript만을 지원합니다. 따라서 TypeScript 컴파일러(tsc)를 이용하여 JavaScript로 변환하여 사용해야 합니다.
   `tsconfig.json` 파일을 이용하여 컴파일러에 여러 옵션(ex. 어떤 버전의 JavaScript로 변환할 것인지)을 줄 수가 있습니다.
     ```jsonc
