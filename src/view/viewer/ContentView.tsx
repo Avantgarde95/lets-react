@@ -40,6 +40,9 @@ const components: Components = {
         } else {
             return <code className={className}>{children}</code>;
         }
+    },
+    a({ href, children }) {
+        return <a target={'_blank'} rel={'noopenner noreferrer'} href={href as string}>{children}</a>
     }
 };
 
