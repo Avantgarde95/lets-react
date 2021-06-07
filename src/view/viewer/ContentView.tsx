@@ -34,11 +34,13 @@ const components: Components = {
     code({ inline, className, children }) {
         const hasLanguage = ((typeof className !== 'undefined') && className.startsWith('language-'));
 
-        if (!inline && hasLanguage) {
+        if (inline) {
+            return <code className={className}>{children}</code>;
+        } else if (hasLanguage) {
             const language = convertLanguage(className!!.substring(9));
             return <CodeView language={language} style={xonokai}>{String(children).trimRight()}</CodeView>
         } else {
-            return <code className={className}>{children}</code>;
+            return <CodeView style={xonokai}>{String(children).trimRight()}</CodeView>
         }
     },
     a({ href, children }) {
