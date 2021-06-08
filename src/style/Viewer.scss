@@ -52,4 +52,23 @@
         font-size: 1rem !important;
         font-family: "Inconsolata", monospace !important;
     }
+
+    .Image {
+        text-align: center;
+        box-sizing: border-box;
+        overflow-x: auto;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid #000000;
+    }
+
+    img {
+        max-width: 640px;
+
+        @media (max-width: 700px) {
+            max-width: 420px;
+        }
+    }
 }

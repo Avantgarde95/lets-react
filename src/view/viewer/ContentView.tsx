@@ -45,6 +45,13 @@ const components: Components = {
     },
     a({ href, children }) {
         return <a target={'_blank'} rel={'noopenner noreferrer'} href={href as string}>{children}</a>
+    },
+    img({ src, alt, children }) {
+        return (
+            <div className={'Image'}>
+                <img src={src as string} alt={alt as string}>{children}</img>
+            </div>
+        );
     }
 };
 
