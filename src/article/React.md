@@ -76,17 +76,80 @@
     ![VirtualDOMAbout](http://drive.google.com/uc?export=view&id=12PayH2iFwhQpYbyTxond1Znj1bXUnWR9)
 
 # Component
-- State
-- Props
-- Lifecycle
+- React에서 우리가 그릴 요소(**element**)를 만들어주는 틀을 [컴포넌트(**component**)](https://sambalim.tistory.com/117)라고 합니다. Component는 속성(**props**)을 입력으로 받아 element를 반환해주며, 내부에 상태(**state**)를 가질 수 있습니다.
+    ![Component](http://drive.google.com/uc?export=view&id=1Mer3HX64_lI_WIFNiH-Zlq8_OiS-zVIY)
+- 만약 특정 component의 **state가 변경**되면 React는 [해당 component를 다시 그립니다(렌더링합니다)](https://felixgerschau.com/react-rerender-components/#when-does-react-re-render).
+  - 이 때 state 객체를 직접 변경하면 안 되고, React에서 제공하는 기능(클래스 형태인 경우 `setState()`를 사용, 함수 형태인 경우 `useState()`가 만들어주는 함수를 사용)을 사용하여 state를 변경해야 합니다.
+- Component를 클래스 형태로 선언할 수도 있으며, 함수 형태로 선언할 수도 있습니다.
+  예컨대 위의 예시를 함수 형태로 작성하면 아래와 같습니다.
+    ```jsx
+    // (1) function 키워드를 사용하는 방법
+    function App(props) {
+        // App의 상태(state)를 정의
+        const [text1, setText1] = useState('Hello');
+        const [text2, setText2] = useState('World');
+
+        return (
+            <div>
+                <button
+                    onClick={() => {
+                        setText1(text1 + '!');
+                        setText2(text2 + '!');
+                    }}
+                >
+                    Run
+                </button>
+                <div>
+                    <div>{text1}</div>
+                    <div>{text2}</div>
+                </div>
+            </div>
+        );
+    }
+    ```
+    ```jsx
+    // (2) Arrow function 문법을 사용하는 방법 ((1)과 의미는 동일)
+    const App = () => {
+        // App의 상태(state)를 정의
+        const [text1, setText1] = useState('Hello');
+        const [text2, setText2] = useState('World');
+
+        return (
+            <div>
+                <button
+                    onClick={() => {
+                        setText1(text1 + '!');
+                        setText2(text2 + '!');
+                    }}
+                >
+                    Run
+                </button>
+                <div>
+                    <div>{text1}</div>
+                    <div>{text2}</div>
+                </div>
+            </div>
+        );
+    };
+    ```
+    ([여기서](https://codesandbox.io/s/lets-react-simple-react-functional-example-06xj0) 이 코드를 실행해볼 수 있습니다.)
+
+# Composition
+Under construction...
+- Composition example
+
+# Lifecycle
+Under construction...
 
 # Context
+Under construction...
 - Context
 - Provider
 
 # JSX
+Under construction...
 - `React.createElement`
 - JSX, TSX 문법
 
 # Useful links
-- abc
+Under construction...

@@ -20,6 +20,8 @@ import TypeScriptArticle from 'article/TypeScript.md';
 import SASSArticle from 'article/SASS.md';
 import WebpackArticle from 'article/Webpack.md';
 import ReactArticle from 'article/React.md';
+import MobXArticle from 'article/MobX.md';
+import ReactRouterArticle from 'article/ReactRouter.md';
 
 const articles: Article[] = [
     { title: 'Introduction', sections: parseSections(IntroductionArticle) },
@@ -28,7 +30,9 @@ const articles: Article[] = [
     { title: 'TypeScript', sections: parseSections(TypeScriptArticle) },
     { title: 'Webpack', sections: parseSections(WebpackArticle) },
     { title: 'React', sections: parseSections(ReactArticle) },
-    { title: 'SASS', sections: parseSections(SASSArticle) }
+    { title: 'SASS', sections: parseSections(SASSArticle) },
+    { title: 'MobX', sections: parseSections(MobXArticle) },
+    { title: 'React Router', sections: parseSections(ReactRouterArticle) }
 ];
 
 // 최상위 component.
