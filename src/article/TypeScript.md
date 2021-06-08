@@ -52,7 +52,7 @@ function addInts(x, y) {
 }
 ```
 
-만약 아래와 같이 잘못된 자료형의 코드를 넣는다면 컴파일 에러가 납니다.
+만약 아래와 같이 함수에 잘못된 자료형의 값을 대입한다면 컴파일 에러가 납니다.
 
 ```typescript
 function addInts(x: number, y: number): number {
@@ -61,3 +61,6 @@ function addInts(x: number, y: number): number {
 
 addInts(3, 'abc'); // Wrong code!
 ```
+
+# Useful links
+- [TypeScript 공식 문서](https://www.typescriptlang.org/docs/)

@@ -2,8 +2,6 @@
 
 웹사이트를 구성하는 기본적인 요소들에 대하여 담았습니다.
 
-- [W3Schools](https://www.w3schools.com/): 많은 예시 코드들이 있으며 그것들을 직접 실행해 볼 수 있어 유용합니다.
-
 # HTML / CSS / JS
 
 웹사이트는 일반적으로 아래의 세 가지 언어로 구성됩니다.
@@ -74,5 +72,37 @@
 </html>
 ```
 
-이 때 `<script>...</script>`는 `<head>...</head>`에 넣는 경우도 있고, 위의 예시처럼 `<body>...</body>`의 **끝에** 넣는 경우도 있습니다.
-어떤 차이가 있을까요??
+CSS와 JS 코드를 별도의 파일에 저장하고 싶은 경우, 아래와 같이 하면 됩니다.
+
+```html
+<html>
+<head>
+    <title>제목</title>
+    <link rel="stylesheet" type="text/css" href="MyCSSCode1.css">
+    <link rel="stylesheet" type="text/css" href="MyCSSCode2.css">
+</head>
+<body>
+    <div class="App">
+        <span class="About">Hello!</span>
+        <button class="Run">Click</button>
+    </div>
+
+    <script type="text/javascript" src="MyJSCode1.js"></script>
+    <script type="text/javascript" src="MyJSCode2.js"></script>
+</body>
+</html>
+```
+
+이 때 `<script>...</script>`는 `<head>...</head>`에 넣는 경우도 있고, 위의 예시처럼 `<body>...</body>`의 **끝에** 넣는 경우도 있습니다. [어떤 차이](https://webdir.tistory.com/514)가 있을까요??
+
+# Keywords
+많이 등장하는 키워드들입니다.
+
+- HTML: DOM, head, body, alt, [event 작동 방식](https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/), ...
+- CSS: Margin, padding, border, outline, box model, flexbox, grid, media query, keyframes, transition, ...
+- JavaScript: 호이스팅(hoisting), **[var vs const vs let](https://medium.com/@yeon22/javascript-var-let-const의-차이점-9fab5c264c9c)**, **[this](https://nykim.work/71)**, [prototype-based OOP](https://developer.mozilla.org/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain), [function vs 화살표 함수](https://velog.io/@modolee/javascript-function-vs-arrow-function), closure, module, window 객체, document 객체, ...
+- Website: 웹 접근성(Web accessibility), **반응형 웹(responsive web)**, AJAX, ...
+
+# Useful links
+- [W3Schools](https://www.w3schools.com/): 많은 예시 코드들이 있으며 그것들을 직접 실행해 볼 수 있어 유용합니다.
+- [Can I use](https://caniuse.com/): 웹 브라우저의 종류 및 버전마다 지원하는 기능들이 서로 다릅니다. 내가 사용하고자 하는 HTML, CSS, JS의 기능이 특정 웹 브라우저에서 지원되는지 이 사이트에서 확인할 수 있습니다.
