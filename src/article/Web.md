@@ -32,8 +32,9 @@
 
 # How website works
 
-- 사용자(클라이언트)가 서버에 웹사이트를 요청하면, 서버는 HTML, JS, CSS 파일들을 보내 줍니다.
-- 웹 브라우저는 HTML, CSS로부터 각각 DOM(Document Object Model) tree 및 CSSOM(CSS Object Model)을 생성합니다.
+- 사용자(클라이언트)가 서버에 웹사이트를 요청하면, 서버는 웹사이트의 HTML 파일을 보내 줍니다.
+- 웹 브라우저는 HTML을 읽어 DOM(Document Object Model) tree를 생성합니다.
+  - 중간에 이미지, JS, CSS 등 파일들의 링크를 만나면 해당 파일들을 다운로드 / 실행합니다.
 - 웹 브라우저는 이들로부터 render tree를 만들어 화면에 웹사이트를 그립니다.
 
 # Example

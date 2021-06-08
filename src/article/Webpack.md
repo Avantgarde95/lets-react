@@ -25,13 +25,16 @@
   예컨대 TypeScript 파일들을 [ts-loader](https://www.npmjs.com/package/ts-loader)를 사용하여 처리하고자 한다면 아래와 같이 설정하면 됩니다.
     ```javascript
     module.exports = (env, argv) => {
-        ...,
-        module: {
-            rules: {
-                test: /\.tsx?$/, // .ts 또는 .tsx로 끝나는 파일 (JavaScript 정규 표현식 참고)
-                use: 'ts-loader' // ts-loader 사용
+        return {
+            ...,
+            module: {
+                rules: [
+                    // .ts 또는 .tsx로 끝나는 파일들은 ts-loader를 사용.
+                    // (JavaScript 정규 표현식 참고)
+                    { test: /\.tsx?$/, use: 'ts-loader' }
+                ]
             }
-        }
+        };
     }
     ```
 
@@ -42,10 +45,12 @@
     const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
     module.exports = (env, argv) => {
-        ...,
-        plugins: [
-            new CleanWebpackPlugin()
-        ]
+        return {
+            ...,
+            plugins: [
+                new CleanWebpackPlugin()
+            ]
+        };
     }
     ```
 
@@ -56,6 +61,22 @@
   Chrome 등의 웹 브라우저들은 source map을 인식하여, 만약 에러가 발생하면 원본 코드의 해당하는 줄을 자동으로 찾아줍니다.
 - 별도의 파일(.map)로 생성할 수도 있으며, 결과 코드 내에 삽입할 수도 (inline) 있습니다.
 
+# Caching
+- 웹 브라우저는 웹 사이트를 빠르게 로딩하고 트래픽을 줄이기 위하여 파일들을 **캐싱**합니다.
+- 웹 사이트를 수정하여 파일의 내용이 바뀌었어도, 파일의 이름이 이전과 동일하면 웹 브라우저는 때때로 서버에서 새 파일을 다운받지 않고 캐싱해둔 파일을 그대로 사용합니다.
+- Webpack에는 결과 파일의 이름에 해시(hash)값을 삽입하여 웹 브라우저가 새로운 파일을 사용하도록 강제하는 [유용한 기능](https://webpack.js.org/guides/caching/)이 존재합니다.
+    ```javascript
+    module.exports = (env, argv) => {
+        return {
+            output: {
+                filename: '[name].[contenthash].js'
+            }
+        };
+    }
+    ```
+  예를 들어 "main.js" 대신 "main.c5ff92a7652991cb5717.js"와 같이 파일이 생성됩니다.
+
 # Example
 
 이 웹사이트도 Webpack을 이용하여 제작하였습니다.
+웹사이트 코드를 다운받고 `npm install`로 라이브러리들을 설치한 후 `npm run debug` 또는 `npm run build`를 실행하면 "docs" 폴더에 결과 파일들이 생성됩니다.
