@@ -1,6 +1,6 @@
 # Let's react
 
-[React](https://reactjs.org/)로 작성한 React 개념서
+[React](https://reactjs.org/)로 작성한 React 입문서
 
 ### Requirements
 - [Node.js](https://nodejs.org/)

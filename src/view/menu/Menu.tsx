@@ -11,6 +11,7 @@ export const Menu = () => {
         <div className={`Menu ${isMenuOpen ? 'open' : ''}`}>
             {articles.map((article, index) =>
                 <ArticleItem
+                    key={index}
                     article={article}
                     isSelected={index === articleIndex}
                     onClick={() => {
