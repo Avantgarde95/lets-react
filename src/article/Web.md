@@ -105,4 +105,5 @@ CSS와 JS 코드를 별도의 파일에 저장하고 싶은 경우, 아래와 �
 
 # Useful links
 - [W3Schools](https://www.w3schools.com/): 많은 예시 코드들이 있으며 그것들을 직접 실행해 볼 수 있어 유용합니다.
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide): Mozilla에서 제작한 웹 관련 가이드로 웹의 각 기능에 대해 다양하게 설명하여 유용합니다.
 - [Can I use](https://caniuse.com/): 웹 브라우저의 종류 및 버전마다 지원하는 기능들이 서로 다릅니다. 내가 사용하고자 하는 HTML, CSS, JS의 기능이 특정 웹 브라우저에서 지원되는지 이 사이트에서 확인할 수 있습니다.
