@@ -7,7 +7,7 @@ import { ViewProvider } from 'store/ViewContext';
 import { App } from 'view/App';
 
 // 스타일들 불러오기.
-import 'style/Main.scss';
+import 'style/Page.scss';
 import 'style/App.scss';
 import 'style/Menu.scss';
 import 'style/Viewer.scss';

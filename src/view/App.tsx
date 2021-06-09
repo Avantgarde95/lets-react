@@ -37,8 +37,8 @@ const Header = () => (
     </div>
 );
 
-const Content = () => (
-    <div className={'Content'}>
+const Main = () => (
+    <div className={'Main'}>
         <Menu />
         <Viewer />
     </div>
@@ -47,6 +47,6 @@ const Content = () => (
 export const App = () => (
     <div className={'App'}>
         <Header />
-        <Content />
+        <Main />
     </div>
 );

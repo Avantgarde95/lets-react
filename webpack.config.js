@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
 
     return {
         mode: 'development',
-        entry: getAbsolutePath(srcPath, 'Main.tsx'),
+        entry: getAbsolutePath(srcPath, 'Page.tsx'),
         devtool: isDebugMode ? 'inline-source-map' : false,
         target: ['web', 'es3'],
         output: {
