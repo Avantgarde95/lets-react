@@ -36,7 +36,7 @@
     - Virtual DOM은 실제 DOM과 유사한 tree 형태를 가지고 있습니다.
     - 사용자가 데이터를 변경하면 virtual DOM이 업데이트됩니다.
     - React는 virtual DOM의 현재 버전과 이전 버전을 비교하여 달라진 부분들을 찾아서 실제 DOM을 알아서 효율적으로 업데이트 해줍니다.
-- 예를 들어, 위의 예시에서 사용자가 버튼을 클릭하여 데이터들을 변경하면, React는 virtual DOM을 비교하여 Text1과 Text2가 변경되었다는 것을 알아내어 실제 DOM에 반영합니다.
+- 아래는 위의 예시를 React로 재작성한 코드입니다. 사용자가 버튼을 클릭하여 데이터들을 변경하면, React는 virtual DOM을 비교하여 Text1과 Text2가 변경되었다는 것을 알아내어 실제 DOM에 반영합니다.
     ```jsx
     // App이라는 component를 선언
     class App extends React.Component {

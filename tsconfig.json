@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "esnext",
         "target": "es3",
         "sourceMap": true,
         "strict": true,
         "jsx": "react",
+        "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "baseUrl": "./",

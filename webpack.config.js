@@ -32,23 +32,11 @@ module.exports = (env, argv) => {
         },
         module: {
             rules: [
-                {
-                    test: /\.tsx?$/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
-                        }
-                    }
-                },
-                {
-                    test: /\.(css|scss)$/,
-                    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-                },
-                {
-                    test: /\.md$/,
-                    type: 'asset/source' // raw-loader: Deprecated in Webpack 5.
-                }
+                // ts-loader 대신 babel-loader + TypeScript preset으로도 가능.
+                { test: /\.tsx?$/, use: 'ts-loader' },
+                { test: /\.(css|scss)$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
+                // raw-loader: Deprecated in Webpack 5.
+                { test: /\.md$/, type: 'asset/source' }
             ]
         },
         plugins: [
