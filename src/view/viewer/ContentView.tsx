@@ -40,7 +40,7 @@ const ImageView = ({ src, alt, children }: ImageViewProps) => {
     const [isLoad, setLoad] = useState(false);
 
     return (
-        <div className={'Image'}>
+        <div className={'ImageView'}>
             {!isLoad && 'Loading...'}
             <img
                 src={src}
@@ -51,6 +51,37 @@ const ImageView = ({ src, alt, children }: ImageViewProps) => {
             >
                 {children}
             </img>
+        </div>
+    );
+};
+
+interface DemoViewProps {
+    href: string;
+}
+
+const DemoView = ({ href }: DemoViewProps) => {
+    const [show, setShow] = useState(false);
+
+    return (
+        <div className={'DemoView'}>
+            <button
+                className={'Show'}
+                onClick={() => {
+                    setShow(!show);
+                }}
+            >
+                {show ? '데모 접기' : '데모 열기'}
+            </button>
+            {show && (
+                <div className={'Main'}>
+                    <iframe
+                        className={'Code'}
+                        src={href}
+                        allow={'accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'}
+                        sandbox={'allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'}
+                    />
+                </div>
+            )}
         </div>
     );
 };
@@ -69,7 +100,13 @@ const components: Components = {
         }
     },
     a({ href, children }) {
-        return <a target={'_blank'} rel={'noopenner noreferrer'} href={href as string}>{children}</a>
+        const hrefString = href as string;
+
+        if (hrefString.startsWith('https://codesandbox.io/embed')) {
+            return <DemoView href={hrefString} />;
+        } else {
+            return <a target={'_blank'} rel={'noopenner noreferrer'} href={hrefString}>{children}</a>
+        }
     },
     img({ src, alt, children }) {
         return <ImageView src={src as string} alt={alt as string}>{children}</ImageView>;

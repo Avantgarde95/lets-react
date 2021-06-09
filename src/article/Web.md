@@ -41,36 +41,37 @@
 
 ```html
 <html>
-<head>
-    <title>제목</title>
+    <head>
+        <title>제목</title>
 
-    <style type="text/css">
-        .App {
-            width: 100px;
-            border: 1px solid #000000;
-        }
+        <style type="text/css">
+            .App {
+                width: 100px;
+                border: 1px solid #000000;
+            }
 
-        .About {
-            color: #0000ff;
-        }
-    </style>
-</head>
-<body>
-    <div class="App">
-        <span class="About">Hello!</span>
-        <button class="Run">Click</button>
-    </div>
+            .About {
+                color: #0000ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="App">
+            <span class="About">Hello!</span>
+            <button class="Run">Click</button>
+        </div>
 
-    <script type="text/javascript">
-        const button = document.getElementsByClassName('Run')[0];
+        <script type="text/javascript">
+            const button = document.getElementsByClassName('Run')[0];
 
-        button.addEventListener('click', () => {
-            alert('Yeah!');
-        });
-    </script>
-</body>
+            button.addEventListener('click', () => {
+                alert('Yeah!');
+            });
+        </script>
+    </body>
 </html>
 ```
+<https://codesandbox.io/embed/lets-react-simple-html-example-zme61?codemirror=1>
 
 CSS와 JS 코드를 별도의 파일에 저장하고 싶은 경우, 아래와 같이 하면 됩니다.
 
