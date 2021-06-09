@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Components } from 'react-markdown/src/ast-to-react';
 import { PrismLight as CodeView } from 'react-syntax-highlighter';
@@ -30,6 +30,31 @@ function convertLanguage(language: string) {
     }
 }
 
+interface ImageViewProps {
+    src: string;
+    alt: string;
+    children: ReactNode;
+}
+
+const ImageView = ({ src, alt, children }: ImageViewProps) => {
+    const [isLoad, setLoad] = useState(false);
+
+    return (
+        <div className={'Image'}>
+            {!isLoad && 'Loading...'}
+            <img
+                src={src}
+                alt={alt}
+                onLoad={() => {
+                    setLoad(true);
+                }}
+            >
+                {children}
+            </img>
+        </div>
+    );
+};
+
 const components: Components = {
     code({ inline, className, children }) {
         const hasLanguage = ((typeof className !== 'undefined') && className.startsWith('language-'));
@@ -47,11 +72,7 @@ const components: Components = {
         return <a target={'_blank'} rel={'noopenner noreferrer'} href={href as string}>{children}</a>
     },
     img({ src, alt, children }) {
-        return (
-            <div className={'Image'}>
-                <img src={src as string} alt={alt as string}>{children}</img>
-            </div>
-        );
+        return <ImageView src={src as string} alt={alt as string}>{children}</ImageView>;
     }
 };
 
