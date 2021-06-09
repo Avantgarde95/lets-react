@@ -1,4 +1,4 @@
-@keyframes showMenuDropdown {
+@keyframes Menu-showDropdown {
     0% {
         transform: scaleY(0);
     }
@@ -45,7 +45,7 @@
 
         .Dropdown {
             transform-origin: top;
-            animation: showMenuDropdown 0.5s 1;
+            animation: Menu-showDropdown 0.5s 1;
         }
     }
 
