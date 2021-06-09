@@ -22,6 +22,7 @@ import WebpackArticle from 'article/Webpack.md';
 import ReactArticle from 'article/React.md';
 import MobXArticle from 'article/MobX.md';
 import ReactRouterArticle from 'article/ReactRouter.md';
+import ElectronArticle from 'article/Electron.md';
 
 const articles: Article[] = [
     { title: 'Introduction', sections: parseSections(IntroductionArticle) },
@@ -32,7 +33,8 @@ const articles: Article[] = [
     { title: 'React', sections: parseSections(ReactArticle) },
     { title: 'SASS', sections: parseSections(SASSArticle) },
     { title: 'MobX', sections: parseSections(MobXArticle) },
-    { title: 'React Router', sections: parseSections(ReactRouterArticle) }
+    { title: 'React Router', sections: parseSections(ReactRouterArticle) },
+    { title: 'Electron', sections: parseSections(ElectronArticle) }
 ];
 
 // 최상위 component.

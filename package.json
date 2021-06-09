@@ -4,8 +4,6 @@
     "dependencies": {
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "mobx": "^6.3.2",
-        "mobx-react-lite": "^3.2.0",
         "react-markdown": "^6.0.2",
         "react-syntax-highlighter": "^15.4.3"
     },
