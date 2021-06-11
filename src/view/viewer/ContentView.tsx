@@ -1,5 +1,5 @@
-import React, { ReactNode, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React, { lazy, ReactNode, Suspense, useState } from 'react';
+const ReactMarkdown = lazy(() => import('react-markdown'));
 import { Components } from 'react-markdown/src/ast-to-react';
 import { PrismLight as CodeView } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
@@ -117,6 +117,10 @@ interface ContentViewProps {
     content: string;
 }
 
-export const ContentView = ({ content }: ContentViewProps) => (
-    <ReactMarkdown components={components}>{content}</ReactMarkdown>
-);
+export const ContentView = ({ content }: ContentViewProps) => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ReactMarkdown components={components}>{content}</ReactMarkdown>
+        </Suspense>
+    );
+};
