@@ -16,7 +16,7 @@ const components: Components = {
         const language = hasLanguage ? className!!.substring(9) : undefined;
 
         if (inline) {
-            return <code className={className}>{children}</code>;
+            return <code className={'InlineCodeView'}>{children}</code>;
         } else {
             return <CodeView language={language}>{children}</CodeView>;
         }

@@ -70,6 +70,11 @@
         font-family: "Inconsolata", monospace !important;
     }
 
+    .InlineCodeView {
+        padding: 0.1rem 0.3rem;
+        background-color: rgba(27, 31, 35, 0.05);
+    }
+
     .ImageView {
         text-align: center;
         box-sizing: border-box;
