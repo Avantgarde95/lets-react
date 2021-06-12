@@ -8,6 +8,7 @@ export interface ArticleItemProps {
     onClick: () => any;
 }
 
+// Button for opening the article + The list of the sections of the article.
 export const ArticleItem = ({ article, isSelected, onClick }: ArticleItemProps) => {
     return (
         <div className={'ArticleItem'}>

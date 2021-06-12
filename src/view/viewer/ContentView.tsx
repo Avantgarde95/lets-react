@@ -1,10 +1,15 @@
 import React, { lazy, Suspense } from 'react';
+
+// Since the size of react-markdown is large, we use code splitting and lazy loading.
+// (See https://reactjs.org/docs/code-splitting.html.)
 const ReactMarkdown = lazy(() => import('react-markdown'));
 import { Components } from 'react-markdown/src/ast-to-react';
+
 import { CodeView } from 'view/viewer/content/CodeView';
 import { DemoView } from 'view/viewer/content/DemoView';
 import { ImageView } from 'view/viewer/content/ImageView';
 
+// Override the rendering functions of some tags.
 const components: Components = {
     code({ inline, className, children }) {
         const hasLanguage = ((typeof className !== 'undefined') && className.startsWith('language-'));
@@ -34,6 +39,7 @@ interface ContentViewProps {
     content: string;
 }
 
+// Component for rendering a markdown string.
 export const ContentView = ({ content }: ContentViewProps) => {
     return (
         <Suspense fallback={<div>Loading...</div>}>

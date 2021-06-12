@@ -13,6 +13,7 @@ PrismLight.registerLanguage('json', json);
 PrismLight.registerLanguage('html', html);
 PrismLight.registerLanguage('css', css);
 
+// ex. language = 'TypeScript' -> return 'tsx'.
 function convertLanguage(language?: string) {
     if (typeof language === 'undefined') {
         return undefined;
@@ -37,6 +38,7 @@ export interface CodeViewProps {
     children: ReactNode;
 }
 
+// Component for showing a code with syntax highlighting.
 export const CodeView = ({ language, children }: CodeViewProps) => (
     <PrismLight language={convertLanguage(language)} style={xonokai}>
         {String(children).trimRight()}

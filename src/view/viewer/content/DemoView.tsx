@@ -4,6 +4,8 @@ export interface DemoViewProps {
     href: string;
 }
 
+// Show CodeSandbox demo.
+// (See https://codesandbox.io/docs/embedding.)
 export const DemoView = ({ href }: DemoViewProps) => {
     const [show, setShow] = useState(false);
 

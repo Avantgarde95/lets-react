@@ -3,16 +3,17 @@ import { ArticleContext } from 'store/ArticleContext';
 import { ViewContext } from 'store/ViewContext';
 import { SectionView } from 'view/viewer/SectionView';
 
+// Render an article.
 export const Viewer = () => {
     const { articles, articleIndex } = useContext(ArticleContext);
-    const { openMenu } = useContext(ViewContext);
+    const { setMenuOpen } = useContext(ViewContext);
     const article = articles[articleIndex];
 
     return (
         <div
             className={'Viewer'}
             onClick={() => {
-                openMenu(false);
+                setMenuOpen(false);
             }}
         >
             <div className={'ArticleTitle'}>{article.title}</div>

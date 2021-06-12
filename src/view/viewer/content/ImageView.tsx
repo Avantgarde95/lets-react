@@ -6,9 +6,11 @@ export interface ImageViewProps {
     children: ReactNode;
 }
 
+// Component for showing an image.
 export const ImageView = ({ src, alt, children }: ImageViewProps) => {
     const [isLoad, setLoad] = useState(false);
 
+    // Show 'Loading...' until the image is loaded.
     return (
         <div className={'ImageView'}>
             {!isLoad && 'Loading...'}

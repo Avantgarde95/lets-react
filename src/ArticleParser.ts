@@ -1,6 +1,7 @@
 import { Section } from 'common/Article';
 
-// line이 "# Title" 형태면 "Title"을 반환, 해당 형태가 아니면 null을 반환.
+// If line = '# Title', return 'Title'.
+// Otherwise, return null.
 function getTitleIfSection(line: string) {
     const match = line.match(/^#[^#]/);
 
@@ -12,7 +13,7 @@ function getTitleIfSection(line: string) {
     }
 }
 
-// Markdown 문자열을 제목("# ...")을 기준으로 나눈다.
+// Divide a markdown string into 'sections'.
 //
 // Hooray!    -------> Section {title: null, content: 'Hooray...'}
 //

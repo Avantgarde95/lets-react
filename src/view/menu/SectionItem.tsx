@@ -7,6 +7,7 @@ export interface SectionItemProps {
     section: Section;
 }
 
+// Button for opening the section.
 export const SectionItem = ({ index, section }: SectionItemProps) => {
     const { setSectionIndex } = useContext(ArticleContext);
 

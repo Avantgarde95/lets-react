@@ -4,13 +4,13 @@ import { Menu } from 'view/menu/Menu';
 import { Viewer } from 'view/viewer/Viewer';
 
 const MenuButton = () => {
-    const { isMenuOpen, openMenu } = useContext(ViewContext);
+    const { isMenuOpen, setMenuOpen } = useContext(ViewContext);
 
     return (
         <button
             className={'Button'}
             onClick={() => {
-                openMenu(!isMenuOpen);
+                setMenuOpen(!isMenuOpen);
             }}
         >
             Menu
@@ -44,6 +44,7 @@ const Main = () => (
     </div>
 );
 
+// The whole application.
 export const App = () => (
     <div className={'App'}>
         <Header />

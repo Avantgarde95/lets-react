@@ -4,6 +4,6 @@ export interface Article {
 }
 
 export interface Section {
-    title: string | null;
-    content: string;
+    title: string | null; // null: No title.
+    content: string; // Markdown string.
 }
