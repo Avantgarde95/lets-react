@@ -2,19 +2,20 @@ import React, { useContext } from 'react';
 import { ViewContext } from 'store/ViewContext';
 import { Menu } from 'view/menu/Menu';
 import { Viewer } from 'view/viewer/Viewer';
+import MenuIcon from 'image/MenuIcon.svg';
 
 const MenuButton = () => {
     const { isMenuOpen, setMenuOpen } = useContext(ViewContext);
 
     return (
-        <button
-            className={'Button'}
+        <img
+            className={'MenuButton'}
+            src={MenuIcon}
+            alt={'Menu'}
             onClick={() => {
                 setMenuOpen(!isMenuOpen);
             }}
-        >
-            Menu
-        </button>
+        />
     );
 };
 
@@ -31,9 +32,13 @@ const CodeButton = () => (
 
 const Header = () => (
     <div className={'Header'}>
-        <MenuButton />
-        <span className={'Title'}>Let's react</span>
-        <CodeButton />
+        <span>
+            <MenuButton />
+            <span className={'Title'}>Let's react</span>
+        </span>
+        <span>
+            <CodeButton />
+        </span>
     </div>
 );
 

@@ -36,7 +36,8 @@ module.exports = (env, argv) => {
                 { test: /\.tsx?$/, use: 'ts-loader' },
                 { test: /\.(css|scss)$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
                 // raw-loader: Deprecated in Webpack 5.
-                { test: /\.md$/, type: 'asset/source' }
+                { test: /\.md$/, type: 'asset/source' },
+                { test: /\.svg$/, type: 'asset/resource' }
             ]
         },
         plugins: [

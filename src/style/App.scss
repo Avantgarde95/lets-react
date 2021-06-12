@@ -17,6 +17,12 @@
         width: 100%;
         margin-bottom: 1rem;
 
+        .MenuButton {
+            cursor: pointer;
+            height: 1.5rem;
+            margin-right: 1rem;
+        }
+
         .Button {
             box-sizing: border-box;
             cursor: pointer;
