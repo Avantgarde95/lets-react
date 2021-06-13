@@ -1,3 +1,5 @@
+@use 'style/Common.scss';
+
 @keyframes Menu-showDropdown {
     0% {
         transform: scaleY(0);
@@ -32,14 +34,14 @@
             padding: 0.5rem;
 
             &.selected {
-                background-color: #cccccc;
+                background-color: Common.$selectionColor;
                 border-bottom: 1px solid #000000;
             }
 
             &:active,
             &:focus,
             &:hover {
-                background-color: #aaaaaa;
+                background-color: Common.$hoverColor;
             }
         }
 
