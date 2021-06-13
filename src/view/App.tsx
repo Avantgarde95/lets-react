@@ -3,15 +3,14 @@ import { ViewContext } from 'store/ViewContext';
 import { Menu } from 'view/menu/Menu';
 import { Viewer } from 'view/viewer/Viewer';
 import MenuIcon from 'image/MenuIcon.svg';
+import CodeIcon from 'image/CodeIcon.svg';
 
 const MenuButton = () => {
     const { isMenuOpen, setMenuOpen } = useContext(ViewContext);
 
     return (
-        <img
+        <MenuIcon
             className={'MenuButton'}
-            src={MenuIcon}
-            alt={'Menu'}
             onClick={() => {
                 setMenuOpen(!isMenuOpen);
             }}
@@ -21,24 +20,20 @@ const MenuButton = () => {
 
 const CodeButton = () => (
     <a
-        className={'Button'}
+        className={'CodeButton'}
         href={'https://github.com/Avantgarde95/lets-react'}
         target={'_blank'}
         rel={'noopenner noreferrer'}
     >
-        Code
+        <CodeIcon />
     </a>
 );
 
 const Header = () => (
     <div className={'Header'}>
-        <span>
-            <MenuButton />
-            <span className={'Title'}>Let's react</span>
-        </span>
-        <span>
-            <CodeButton />
-        </span>
+        <MenuButton />
+        <span className={'Title'}>Let's react</span>
+        <CodeButton />
     </div>
 );
 

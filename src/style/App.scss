@@ -1,5 +1,16 @@
 @use 'style/Common.scss';
 
+@mixin IconButton {
+    cursor: pointer;
+    height: 1.5rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+        fill: Common.$hoverColor;
+    }
+}
+
 .App {
     display: flex;
     flex-direction: column;
@@ -20,25 +31,16 @@
         margin-bottom: 1rem;
 
         .MenuButton {
-            cursor: pointer;
-            height: 1.5rem;
+            @include IconButton();
             margin-right: 1rem;
         }
 
-        .Button {
-            box-sizing: border-box;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            background-color: transparent;
-            font-size: 1rem;
-            font-family: inherit;
+        .CodeButton {
+            height: 1.5rem;
+            margin-left: auto;
 
-            &:active,
-            &:focus,
-            &:hover {
-                color: Common.$hoverColor;
-                text-decoration: underline;
+            svg {
+                @include IconButton();
             }
         }
 

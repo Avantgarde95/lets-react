@@ -35,9 +35,9 @@ module.exports = (env, argv) => {
                 // ts-loader 대신 babel-loader + TypeScript preset으로도 가능.
                 { test: /\.tsx?$/, use: 'ts-loader' },
                 { test: /\.(css|scss)$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
+                { test: /\.svg$/, loader: '@svgr/webpack' },
                 // raw-loader: Deprecated in Webpack 5.
-                { test: /\.md$/, type: 'asset/source' },
-                { test: /\.svg$/, type: 'asset/resource' }
+                { test: /\.md$/, type: 'asset/source' }
             ]
         },
         plugins: [
