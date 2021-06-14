@@ -29,7 +29,7 @@
         padding: 0.5rem 1rem;
         color: #ffffff;
         background-color: #2a2a2a;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
@@ -41,10 +41,16 @@
         animation: Viewer-showViewer 0.5s 1;
     }
 
-    h1 {
+    .SectionView {
         margin-top: 1rem;
+    }
+
+    h1 {
+        margin-top: 0;
         margin-bottom: 1rem;
-        font-size: 1.6rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid #000000;
+        font-size: 1.5rem;
     }
 
     h2 {
@@ -66,6 +72,7 @@
     }
 
     code {
+        // Use !important to override react-syntax-highlighter's styling.
         font-size: 1rem !important;
         font-family: "Inconsolata", monospace !important;
     }

@@ -26,7 +26,7 @@ export const SectionView = ({ index, section }: SectionViewProps) => {
     }, [sectionIndex]);
 
     return (
-        <div ref={ref}>
+        <div className={'SectionView'} ref={ref}>
             {(section.title !== null) && <h1>{section.title}</h1>}
             <ContentView content={section.content} />
         </div>

@@ -117,6 +117,8 @@ CSS와 JS 코드를 별도의 파일에 저장하고 싶은 경우, `<link>`, `<
 
 ## CSS
 - Margin, padding, border, outline, ...
+- [Margin collapsing](velog.io/@raram2/CSS-마진-상쇄Margin-collapsing-원리-완벽-이해)
+  - 종종 부모 element와 자식 element가 둘 다 margin-top을 가지고 있을 때 둘의 top margin이 합쳐지는 경우가 있습니다.
 - **[Selector](https://www.nextree.co.kr/p8468/)**
 - Box model
 - Flexbox, grid
