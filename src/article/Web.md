@@ -73,7 +73,7 @@ button.addEventListener('click', () => {
 </html>
 ```
 
-<https://codesandbox.io/embed/lets-react-simple-html-example-zme61?codemirror=1>
+<https://codesandbox.io/embed/lets-react-simple-html-example-zme61?codemirror=1?module=/index.html>
 
 CSS와 JS 코드를 별도의 파일에 저장하고 싶은 경우, `<link>`, `<script>` 태그를 이용하여 해당 파일들의 경로 또는 링크를 적어주면 됩니다.
 

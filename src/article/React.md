@@ -29,7 +29,7 @@
         text2.innerHTML += '!';
     });
     ```
-    <https://codesandbox.io/embed/lets-react-simple-dom-example-nyf3w?codemirror=1>
+    <https://codesandbox.io/embed/lets-react-simple-dom-example-nyf3w?codemirror=1?module=/App.js>
     ![DirectDOMUpdate](https://drive.google.com/uc?export=view&id=1Ymh5fekB7WfPzZ-ofVpfCvdsOLbV0GlE)
 - 사용자가 DOM을 수정할때마다 웹 브라우저는 웹사이트를 다시 렌더링합니다. 즉 DOM의 수정은 비싼 작업이며, 만약 DOM의 수정이 잦다면 **성능 저하**를 일으킬 수 있습니다.
 - React는 DOM을 직접 수정하는 기존의 방식 대신, ['가상' DOM(Virtual DOM)](https://ryublock.tistory.com/41)이라는 개념을 도입하여 이 문제를 해결합니다.
@@ -72,7 +72,7 @@
         }
     }
     ```
-    <https://codesandbox.io/embed/lets-react-simple-react-example-7814u?codemirror=1>
+    <https://codesandbox.io/embed/lets-react-simple-react-example-7814u?codemirror=1?module=/src/App.jsx>
     ![VirtualDOMAbout](https://drive.google.com/uc?export=view&id=12PayH2iFwhQpYbyTxond1Znj1bXUnWR9)
 
 # Component
@@ -132,7 +132,7 @@
         );
     };
     ```
-    <https://codesandbox.io/embed/lets-react-simple-react-functional-example-06xj0?codemirror=1>
+    <https://codesandbox.io/embed/lets-react-simple-react-functional-example-06xj0?codemirror=1?module=/src/App2.jsx>
 
 # JSX
 - 위의 예시들을 보면 일반적인 JavaScript 코드랑 다르게 코드에 JavaScript와 HTML이 섞여있는 모양새를 하고 있습니다.
@@ -281,7 +281,7 @@
     };
     ```
     ![Composition](https://drive.google.com/uc?export=view&id=1_tDCCKObMY-z10tQsh24Bh8g10W4Z_tD)
-    <https://codesandbox.io/embed/lets-react-simple-react-composition-example-dqsvc?codemirror=1>
+    <https://codesandbox.io/embed/lets-react-simple-react-composition-example-dqsvc?codemirror=1?module=/src/App.tsx>
 
 # Lifecycle
 Under construction...
