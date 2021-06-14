@@ -47,7 +47,8 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 template: getAbsolutePath(srcPath, 'Template.html'),
-                filename: getAbsolutePath(outPath, 'index.html')
+                filename: getAbsolutePath(outPath, 'index.html'),
+                favicon: getAbsolutePath(srcPath, 'image/PageIcon.ico')
             })
         ]
     };
