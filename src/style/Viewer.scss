@@ -1,3 +1,5 @@
+@use 'style/Common.scss';
+
 @keyframes Viewer-showViewer {
     0% {
         opacity: 0;
@@ -64,7 +66,7 @@
     }
 
     ul {
-        padding-left: 2rem;
+        padding-left: 1.5rem;
     }
 
     a {
@@ -83,6 +85,7 @@
     }
 
     .ImageView {
+        cursor: pointer;
         text-align: center;
         box-sizing: border-box;
         overflow-x: auto;
@@ -96,8 +99,14 @@
             max-width: 640px;
 
             @media (max-width: 700px) {
-                max-width: 420px;
+                max-width: 100%;
             }
+        }
+
+        &:active,
+        &:hover,
+        &:focus {
+            border-color: Common.$hoverColor;
         }
     }
 
@@ -113,6 +122,13 @@
             background-color: transparent;
             font-size: 1rem;
             font-family: inherit;
+
+            &:active,
+            &:hover,
+            &:focus {
+                color: Common.$hoverColor;
+                border-color: Common.$hoverColor;
+            }
         }
 
         .Main {
