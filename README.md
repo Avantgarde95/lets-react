@@ -2,6 +2,8 @@
 
 [React](https://reactjs.org/)로 작성한 React 입문서
 
+![Screenshot](https://raw.githubusercontent.com/Avantgarde95/lets-react/master/Screenshot.png)
+
 ### Requirements
 - [Node.js](https://nodejs.org/)
 
