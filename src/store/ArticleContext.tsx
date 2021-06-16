@@ -55,12 +55,18 @@ export const ArticleProvider = ({ articles, children }: ArticleProviderProps) =>
             articleIndex: articleIndex,
             sectionIndex: sectionIndex,
             setArticleIndex: index => {
-                setArticleIndex(validateArticleIndex(articles, index));
-                localStorage.setItem('articleIndex', `${index}`);
+                const articleIndex = validateArticleIndex(articles, index);
+                localStorage.setItem('articleIndex', `${articleIndex}`);
+                setArticleIndex(articleIndex);
             },
             setSectionIndex: index => {
-                setSectionIndex(validateSectionIndex(articles, articleIndex, index));
-                localStorage.setItem('sectionIndex', `${index}`);
+                const sectionIndex = validateSectionIndex(articles, articleIndex, index);
+
+                if (sectionIndex >= 0) {
+                    localStorage.setItem('sectionIndex', `${sectionIndex}`);
+                }
+
+                setSectionIndex(sectionIndex);
             }
         }}>
             {children}
