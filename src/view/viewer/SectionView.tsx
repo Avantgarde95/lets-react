@@ -21,7 +21,7 @@ export const SectionView = ({ index, section }: SectionViewProps) => {
 
             // Reset the section selection after scrolling.
             // This enables the user to scroll to the same section multiple times.
-            setSectionIndex(null);
+            setSectionIndex(-1);
         }
     }, [sectionIndex]);
 
