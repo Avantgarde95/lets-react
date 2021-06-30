@@ -283,17 +283,13 @@
     ![Composition](https://drive.google.com/uc?export=view&id=1_tDCCKObMY-z10tQsh24Bh8g10W4Z_tD)
     <https://codesandbox.io/embed/lets-react-simple-react-composition-example-dqsvc?codemirror=1?module=/src/App.tsx>
 
-# Lifecycle
-Under construction...
-
-# Context
-Under construction...
-- Context
-- Provider
-
 # Useful links
 [React 공식 문서](https://reactjs.org/docs/getting-started.html)에서 자주 읽어보게 되는 부분들을 몇 개 뽑았습니다.
 - [Components and Props](https://reactjs.org/docs/components-and-props.html)
+- [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+- [Context](https://reactjs.org/docs/context.html)
+  - 어떤 데이터를 여러 단계 밑에 있는 자식 component로 전달하고 싶을 때 유용합니다.
+  - 최상위 component에 state를 달고 context를 이용하여 state와 각 state의 setter 함수들을 자식들에게 뿌리는 식으로 데이터(상태) 관리 시스템을 쉽게 구현할 수 있습니다.
 - [Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
   - Component의 리스트를 생성할 때 만약 component 여러 개가 동시에 바뀐다거나 의도한 것과 다른 component가 바뀐다거나 하는 버그들이 발생할 경우, **key**를 사용해보세요.
 - [Lifting State Up](https://reactjs.org/docs/lifting-state-up.html)
