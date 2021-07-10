@@ -21,7 +21,7 @@ export const ArticleItem = ({ article, isSelected, onClick }: ArticleItemProps) 
             {isSelected && (
                 <div className={'Dropdown'}>
                     {article.sections.map((section, index) =>
-                        (section.title !== null) && <SectionItem key={index} index={index} section={section} />
+                        (section.title !== null) && <SectionItem key={`${article.title}-${section.title}`} index={index} section={section} />
                     )}
                 </div>
             )}

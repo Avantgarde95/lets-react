@@ -22,7 +22,7 @@ export const Viewer = () => {
                 key={article.title} // Force React to re-render this when the article is changed.
             >
                 {article.sections.map((section, index) => (
-                    <SectionView key={index} index={index} section={section} />
+                    <SectionView key={`${index}-${section.title}`} index={index} section={section} />
                 ))}
             </div>
         </div>
