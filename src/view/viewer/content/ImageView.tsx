@@ -11,22 +11,25 @@ export interface ImageViewProps {
 // Component for showing an image.
 export const ImageView = ({ src, alt, children }: ImageViewProps) => {
     const [isLoad, setLoad] = useState(false);
-    const ref = useRef<HTMLImageElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const element = ref.current;
 
         if (element !== null) {
-            new Luminous(element, { sourceAttribute: 'src' });
+            new Luminous(element, { sourceAttribute: 'data-src' });
         }
     }, []);
 
     // Show 'Loading...' until the image is loaded.
     return (
-        <div className={'ImageView'}>
+        <div
+            ref={ref}
+            className={'ImageView'}
+            data-src={src}
+        >
             {!isLoad && 'Loading...'}
             <img
-                ref={ref}
                 src={src}
                 alt={alt}
                 onLoad={() => {
