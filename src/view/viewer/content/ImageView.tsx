@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { Luminous } from 'luminous-lightbox';
 import 'luminous-lightbox/dist/luminous-basic.min.css';
 
-export interface ImageViewProps {
+interface ImageViewProps {
     src: string;
     alt: string;
     children: ReactNode;

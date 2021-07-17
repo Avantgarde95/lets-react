@@ -2,7 +2,7 @@ import React from 'react';
 import { Article } from 'common/Article';
 import { SectionItem } from 'view/menu/SectionItem';
 
-export interface ArticleItemProps {
+interface ArticleItemProps {
     article: Article;
     isSelected: boolean;
     onClick: () => any;

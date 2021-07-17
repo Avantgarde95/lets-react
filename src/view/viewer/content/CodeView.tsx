@@ -33,7 +33,7 @@ function convertLanguage(language?: string) {
     }
 }
 
-export interface CodeViewProps {
+interface CodeViewProps {
     language?: string;
     children: ReactNode;
 }

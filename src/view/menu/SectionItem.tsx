@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Section } from 'common/Article';
 import { ArticleContext } from 'store/ArticleContext';
 
-export interface SectionItemProps {
+interface SectionItemProps {
     index: number;
     section: Section;
 }

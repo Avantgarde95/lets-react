@@ -6,7 +6,7 @@ export const ViewContext = createContext({} as {
     setMenuOpen: (value: boolean) => any
 });
 
-export interface ViewProviderProps {
+interface ViewProviderProps {
     children: ReactNode;
 }
 

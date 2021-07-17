@@ -37,7 +37,7 @@ export const ArticleContext = createContext({} as {
     setSectionIndex: (index: number) => any
 });
 
-export interface ArticleProviderProps {
+interface ArticleProviderProps {
     articles: Article[],
     children: ReactNode;
 }
