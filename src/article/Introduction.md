@@ -1,3 +1,4 @@
+# About
 [React](https://reactjs.org/)로 작성한 React 입문서입니다.
 
 - 각 프로그램 및 라이브러리의 역할이 무엇인지, 그리고 용어들이 무슨 의미인지 담았습니다.
@@ -6,3 +7,7 @@
 - 지식의 한계로 내용적으로 아직 부족한 부분들이 많아, 추가할 내용이 있다면 제안해주시면 매우 감사하겠습니다.
 
 상단 왼쪽의 버튼을 눌러 메뉴를 열 수 있습니다.
+
+# Contact
+- 제작자 홈페이지: <https://avantgarde95.github.io>
+- 제작자 블로그: <https://avantgarde95.github.io/blog>
