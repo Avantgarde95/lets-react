@@ -1,2 +1,8 @@
 $selectionColor: #cccccc;
 $hoverColor: #aaaaaa;
+
+@mixin onSmallScreen {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
