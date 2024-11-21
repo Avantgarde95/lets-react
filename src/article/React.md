@@ -30,7 +30,7 @@
     });
     ```
     <https://codesandbox.io/embed/lets-react-simple-dom-example-nyf3w?codemirror=1?module=/App.js>
-    ![DirectDOMUpdate](https://drive.google.com/uc?export=view&id=1Ymh5fekB7WfPzZ-ofVpfCvdsOLbV0GlE)
+    ![DirectDOMUpdate](https://lh3.googleusercontent.com/d/1Ymh5fekB7WfPzZ-ofVpfCvdsOLbV0GlE)
 - 사용자가 DOM을 수정할때마다 웹 브라우저는 웹사이트를 다시 렌더링합니다. 즉 DOM의 수정은 비싼 작업이며, 만약 DOM의 수정이 잦다면 **성능 저하**를 일으킬 수 있습니다.
 - React는 DOM을 직접 수정하는 기존의 방식 대신, ['가상' DOM(Virtual DOM)](https://ryublock.tistory.com/41)이라는 개념을 도입하여 이 문제를 해결합니다.
     - Virtual DOM은 실제 DOM과 유사한 tree 형태를 가지고 있습니다.
@@ -73,11 +73,11 @@
     }
     ```
     <https://codesandbox.io/embed/lets-react-simple-react-example-7814u?codemirror=1?module=/src/App.jsx>
-    ![VirtualDOMAbout](https://drive.google.com/uc?export=view&id=12PayH2iFwhQpYbyTxond1Znj1bXUnWR9)
+    ![VirtualDOMAbout](https://lh3.googleusercontent.com/d/12PayH2iFwhQpYbyTxond1Znj1bXUnWR9)
 
 # Component
 - React에서 우리가 그릴 요소(**element**)를 만들어주는 틀을 [컴포넌트(**component**)](https://sambalim.tistory.com/117)라고 합니다. Component는 속성(**props**)을 입력으로 받아 element를 반환해주며, 내부에 상태(**state**)를 가질 수 있습니다.
-    ![Component](https://drive.google.com/uc?export=view&id=1Mer3HX64_lI_WIFNiH-Zlq8_OiS-zVIY)
+    ![Component](https://lh3.googleusercontent.com/d/1Mer3HX64_lI_WIFNiH-Zlq8_OiS-zVIY)
 - 만약 특정 component의 **state가 변경**되면 React는 [해당 component를 다시 그립니다(렌더링합니다)](https://felixgerschau.com/react-rerender-components/#when-does-react-re-render).
   - 이 때 state 객체를 직접 변경하면 안 되고, React에서 제공하는 기능(클래스 형태인 경우 `setState()`를 사용, 함수 형태인 경우 `useState()`가 만들어주는 함수를 사용)을 사용하여 state를 변경해야 합니다.
 - Component를 클래스 형태로 선언할 수도 있으며, 함수 형태로 선언할 수도 있습니다.
@@ -280,7 +280,7 @@
         );
     };
     ```
-    ![Composition](https://drive.google.com/uc?export=view&id=1_tDCCKObMY-z10tQsh24Bh8g10W4Z_tD)
+    ![Composition](https://lh3.googleusercontent.com/d/1_tDCCKObMY-z10tQsh24Bh8g10W4Z_tD)
     <https://codesandbox.io/embed/lets-react-simple-react-composition-example-dqsvc?codemirror=1?module=/src/App.tsx>
 
 # Useful links
